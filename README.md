@@ -1,8 +1,9 @@
 khnum
 =====
 
-<img alt="Khnum image" align="right"
- src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Khnum.svg">
+<a href="https://en.wikipedia.org/wiki/Khnum"><img
+ alt="Khnum image" align="right"
+ src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Khnum.svg"></a>
 
 the god of human readable numbers
 
