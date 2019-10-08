@@ -1,6 +1,9 @@
 khnum
 =====
 
+<img alt="Khnum image" align="right"
+ src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Khnum.svg">
+
 the god of human readable numbers
 
 Install
