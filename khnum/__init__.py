@@ -2,4 +2,6 @@
 human readable numbers
 '''
 
-from .khnum import human_number
+name='khnum'
+
+from .khnum import cnum, hnum

@@ -1,19 +1,29 @@
-'''
-Khnum
-~~~~~
-'''
-
-def human_number(num, units='decimal'):
+def cnum(num):
     '''
-    returns a human readable number from num and units
+    returns str with thousands separated by commas
+
+    >>> khnum.cnum(123456789)
+    '123,456,789'
+    '''
+    return "{:,}".format(num)
+
+def hnum(num, units='decimal'):
+    '''
+    returns rounded human readable str with units suffix
+
+    >>> khnum.hnum(123456789)  # decimal
+    '123.5M'  # million
+
+    >>> khnum.hnum(123456789, 'b')  # bytes
+    '123.5MB'  # megabytes
+    
+    >>> khnum.hnum(123456789, 's')  # SI
+    '117.7MiB'  # mebibytes
+
+    >>> khnum.hnum(123456789e24, 'si')
+    '102121062.3YiB'  # yobibytes
 
     raises ValueError for un-supported units
-
-    For example:  num = 123456789  (123,456,789)
-
-        units = 'd[ecimal]' => 123.5M   (million)
-        units = 'b[ytes]'   => 123.5MB  (megabytes)
-        units = 's[i]'      => 117.7MiB (mebibytes)
 
     Power  Decimal   Bytes      SI (binary)
     ---------------------------------------------
@@ -25,9 +35,6 @@ def human_number(num, units='decimal'):
     10^18  Quin (Qn) Exa- (EB)  1024^6 Exbi (EiB)
     10^21  Sext (S)  Zeta (ZB)  1024^7 Zebi (ZiB)
     10^24  Sept (Sp) Yota (YB)  1024^8 Yobi (YiB)
-
-    Based on Fred Cirera's solution:
-    https://stackoverflow.com/questions/1094841/reusable-library-to-get-human-readable-version-of-file-size
     '''
 
     if units.lower().startswith('d'):  # decimal
