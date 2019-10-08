@@ -1,4 +1,4 @@
-Khnum
+khnum
 =====
 
 the god of human readable numbers

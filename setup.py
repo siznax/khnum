@@ -16,6 +16,6 @@ setup(
     long_description_content_type="text/markdown",
     name='khnum',
     packages=find_packages(),
-    url='https://github.com/siznax/khnum/'
-    version='0.0.1',
+    url='https://github.com/siznax/khnum/',
+    version='0.0.1'
 )
