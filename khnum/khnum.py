@@ -1,3 +1,13 @@
+'''
+Khnum functions
+~~~~~~~~~~~~~~~
+'''
+
+import json
+
+UNITS = ['decimal', 'bytes', 'si']
+
+
 def cnum(num):
     '''
     returns str with thousands separated by commas
@@ -6,6 +16,7 @@ def cnum(num):
     '123,456,789'
     '''
     return "{:,}".format(num)
+
 
 def hnum(num, units='decimal'):
     '''
@@ -16,7 +27,7 @@ def hnum(num, units='decimal'):
 
     >>> khnum.hnum(123456789, 'b')  # bytes
     '123.5MB'  # megabytes
-    
+
     >>> khnum.hnum(123456789, 's')  # SI
     '117.7MiB'  # mebibytes
 
@@ -61,3 +72,13 @@ def hnum(num, units='decimal'):
         num /= boundary
 
     return "%.1f%s%s" % (num, last_unit, suffix)
+
+
+def pretty(data):
+    '''
+    returns prettified JSON from data
+    '''
+    return json.dumps(data,
+                      indent=4,
+                      sort_keys=True,
+                      separators=(',', ': '))

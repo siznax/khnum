@@ -2,10 +2,9 @@
 human readable numbers
 '''
 
-name='khnum'
-
 __author__ = 'steve@siznax.net'
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 
-from .khnum import cnum, hnum
+from .datapoint import Datapoint as num
+from .khnum import cnum, hnum, pretty

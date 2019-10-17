@@ -16,6 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     name='khnum',
     packages=find_packages(),
+    tests_require=['pytest'],
     url='https://github.com/siznax/khnum/',
-    version='0.0.1'
+    version='0.0.2'
 )
