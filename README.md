@@ -53,6 +53,7 @@ Examples
     "_num": 1234567890,
     "cnum": "1,234,567,890",
     "hnum": "1.2GB",
+    "line": "1.2GB (1,234,567,890)",
     "type": "<class 'int'>",
     "units": "b"
 }
