@@ -18,5 +18,5 @@ setup(
     packages=find_packages(),
     tests_require=['pytest'],
     url='https://github.com/siznax/khnum/',
-    version='0.0.2'
+    version='0.0.3'
 )

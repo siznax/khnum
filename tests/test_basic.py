@@ -34,3 +34,7 @@ def test_datapoint_update():
 
     assert num.cnum == '987,654,321'
     assert num.hnum == '987.7MB'
+
+def test_datapoint_compact():
+    num = khnum.num(1234567890, 'b')
+    assert num.line == '1.2GB (1,234,567,890)'

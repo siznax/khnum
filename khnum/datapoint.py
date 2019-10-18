@@ -16,11 +16,7 @@ class Datapoint():
         '''
         returns Datapoint instance
         '''
-        self._num = num
-        self.cnum = khnum.cnum(num)
-        self.hnum = khnum.hnum(num, units)
-        self.type = str(type(num))
-        self.units = units
+        self.update(num, units)
 
     def __str__(self):
         return khnum.pretty(dict(self.__dict__))
@@ -33,4 +29,5 @@ class Datapoint():
         self._num = num
         self.cnum = khnum.cnum(num)
         self.hnum = khnum.hnum(num, units)
+        self.line = '{} ({})'.format(self.hnum, self.cnum)
         self.units = units
